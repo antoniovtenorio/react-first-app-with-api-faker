@@ -1,14 +1,10 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import http from "../../http-common";
 import { IoIosAddCircle } from "react-icons/io";
+import { IClientes } from '../../interface/IClientes';
+import { Link } from 'react-router-dom';
 
 type Props = {};
-
-interface IClientes {
-    id?: number,
-    nome: string,
-    idade: string
-}
 
 type State = {
     clientes: Array<IClientes>
@@ -25,14 +21,15 @@ export default class Clientes extends Component<Props, State> {
     render() {
         return (
             <>
-                <h1>Clientes { }</h1>
                 <section className="hero is-link">
                     <div className="hero-body">
                         <p className="title">
                             Cadastro de Clientes
                         </p>
                         <p className="subtitle">
-                        <button className="button">Novo <IoIosAddCircle/></button>
+                            <Link to="/clientes-add">
+                                <button className="button">Novo <IoIosAddCircle /></button>
+                            </Link>
                         </p>
                     </div>
                 </section>
