@@ -3,6 +3,7 @@ import { IoIosAddCircle } from "react-icons/io";
 import { IClientes } from "../../interface/IClientes";
 import { ICompras } from "../../interface/ICompras";
 import { IProdutos } from "../../interface/IProdutos";
+import { IProdutosPedidos } from "../../interface/IProdutosPedidos";
 import clienteService from "../../services/cliente.service";
 import ProdutoService from "../../services/produto.service";
 import Compras from "../compras/Compras";
@@ -33,8 +34,8 @@ const ClientesAddFc: React.FC = (props) => {
     const initialStateCompras = {
         id: null,
         cliente_id: null,
-        produtos: [],
-        qtd: 0
+        produtos: []
+       
     }
 
     const initialStateClientes: IClientes[] = [
@@ -70,42 +71,38 @@ const ClientesAddFc: React.FC = (props) => {
         ProdutoService.getAllProdutos()
             .then(response => {
                 setProdutos(response.data);
-                console.log(response.data);
             }).catch(error => console.log(error));
 
     }
 
     // CAPTURANDO PRODUTO SELECIONADO
 
-    const captureProduto = (prod: IProdutos) => {
+    const captureProduto = (prod: IProdutosPedidos) => {
         if (clienteSelecionadoByCombo.id === null) {
             return alert("selecione um cliente primeiro");
         }
-       // console.log(prod);
+        console.log("captureProduto", prod);
         addProduto(prod);
     }
 
     // Salvando Produto Selecionado
-    const addProduto = (prod: IProdutos) => {
-        console.log("produto", prod);
-        const exist = compras.find((z) => z.produtos?.filter(s => s.id === prod.id));
-        console.log(exist);
+    const addProduto = (prod: IProdutosPedidos) => {
+        const exist = items.find((z) => z.id === prod.id);
+
+             
+        // nos produtos interface de definição a quantidade deve vir junto com o produto.
+        //DEVEMOS SEPARAR OS ITENS DOS PRODUTOS DAS COMPRAS DEVE FUNCIONAR ASSIM, COMO O EXEMPLO DO SHOPPING CART;
         if (exist) {
-            setCompras(
-                compras.map((x) => x.produtos?.filter(c => c.id === prod.id) ? { ...exist, qtd: exist.qtd + 1 } : x)
+            setItems(
+                items.map((x) => x.id === prod.id ? { ...exist, qtd: exist.qtd + 1 } : x)
             );
         } else {
-            setCompras([...compras, {
-                cliente_id: clienteSelecionadoByCombo.id,
-                produtos: [...produtos, {
-                    nome: prod.nome,
-                    preco: prod.preco
-                }],
-                qtd: 1
-            }]);
+            console.log("else do items", prod);
+            setItems([...items, { ...prod, qtd: 1 }])                
+            }
+            console.log(items);
         }
-        console.log(compras);
-    }
+
     //     // adicionando cliente.
     const saveCliente = (): void => {
         if (clienteAdd.nome === "" || clienteAdd.idade === "") {
@@ -144,7 +141,7 @@ const ClientesAddFc: React.FC = (props) => {
                
         setCompras([{
             cliente_id: event.target.value,
-            qtd: 0
+            
         }])
     }
 
@@ -174,11 +171,13 @@ const ClientesAddFc: React.FC = (props) => {
     const [modalState, setModalState] = useState<IModalState>(initialModalState);
     const [compras, setCompras] = useState<ICompras[]>([initialStateCompras]);
     const [clientes, setClientes] = useState<IClientes[]>(initialStateClientes);
-    const [produtos, setProdutos] = useState<IProdutos[]>([
+    const [items, setItems] = useState<IProdutosPedidos[]>([]);
+    const [produtos, setProdutos] = useState<IProdutosPedidos[]>([
         {
             id: null,
             nome: "",
-            preco: null
+            preco: null,
+           qtd: 0
         }
     ]);
     return (

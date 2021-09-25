@@ -10,14 +10,9 @@ const Compras: React.FC = (props) => {
     const initialStateCompras: ICompras = {
         id: null,
         cliente_id: null,
-        produtos: [],
-        qtd: 0
-    }
-    
-
-   
-
-    
+        produtos: []
+        
+    } 
 
     useEffect(() => {
         
