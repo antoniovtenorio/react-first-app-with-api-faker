@@ -5,7 +5,7 @@ import { HashRouter } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
 import Clientes from './pages/clientes/Clientes';
 import Navbar from './components/layout/Navbar/Navbar';
-import ClientesAdd from './pages/clientes/ClientesAdd';
+import ClientesAddFc from './pages/clientes/ClientesAddFc';
 export default class App extends Component {
   
   render () {
@@ -16,7 +16,7 @@ export default class App extends Component {
           <Switch>
               <Route path="/dashboard" exact component={Dashboard} />
               <Route path="/clientes" exact component={Clientes} />
-              <Route path="/clientes-add" exact component={ClientesAdd} />
+              <Route path="/clientes-add" exact component={ClientesAddFc} />
           </Switch>
         </div>
       </HashRouter>

@@ -6,10 +6,10 @@ const Navbar = () => {
         <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
     <a className="navbar-item" href="/">
-       <img src={logo} width="112" height="28" />
+       <img src={logo} width="112" height="28" alt="logotipo" />
     </a>
 
-    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a href="/" role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>

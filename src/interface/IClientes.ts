@@ -1,6 +1,6 @@
 export interface IClientes {
-    id?: any | null,
-    nome: string,
-    idade: string
+    id?: number | any,
+    nome?: string | any,
+    idade?: string | any
 }
 

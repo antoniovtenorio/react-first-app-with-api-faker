@@ -50,10 +50,10 @@ export default class Clientes extends Component<Props, State> {
     }
 
     componentDidMount = async () => {
-        let response = await http.get<IClientes[]>("/clientes")
+        await http.get<IClientes[]>("/clientes")
             .then(res => {
                 this.setState({ clientes: res.data });
-                console.log(this.state);
+                //console.log(this.state);
             });
     }
 

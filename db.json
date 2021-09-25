@@ -19,6 +19,72 @@
       "id": 4,
       "nome": "Bruna Almeida",
       "idade": "1234"
+    },
+    {
+      "id": 5,
+      "nome": "Jonh biden",
+      "idade": "89"
+    },
+    {
+      "id": 6,
+      "nome": "afdsfsdfsdfsdfdsfdf",
+      "idade": "123"
+    },
+    {
+      "id": 7,
+      "nome": "John Smith",
+      "idade": "123"
+    },
+    {
+      "id": 8,
+      "nome": "Julio Mosquera",
+      "idade": "123123"
+    },
+    {
+      "id": 9,
+      "nome": "asfdsadfasdfasdfasdf",
+      "idade": "12331"
+    },
+    {
+      "id": 10,
+      "nome": "Sicrano de Tal",
+      "idade": "56"
+    }
+  ],
+  "produtos" : [
+    {
+      "id": 1,
+      "nome": "TV LG 20''",
+      "preco" : 500.00
+    },
+    {
+      "id": 2,
+      "nome": "Playstation 5",
+      "preco" : 3500.00
+    },
+    {
+      "id": 3,
+      "nome": "Xbox One Series S",
+      "preco" : 500.00
+    }
+  ],
+  "compras" : [
+    {
+      "id" : 1,
+      "Cliente_Id": 1,
+      "Produtos" : [
+        {
+          "id": 1,
+          "produto_id" : 1,
+          "qtd" : 2
+        },
+        {
+          "id": 2,
+          "produto_id" : 3,
+          "qtd" : 5
+        }
+      ]
+
     }
   ]
 }
