@@ -51,40 +51,143 @@
       "idade": "56"
     }
   ],
-  "produtos" : [
+  "produtos": [
     {
       "id": 1,
       "nome": "TV LG 20''",
-      "preco" : 500.00
+      "preco": 500
     },
     {
       "id": 2,
       "nome": "Playstation 5",
-      "preco" : 3500.00
+      "preco": 3500
     },
     {
       "id": 3,
       "nome": "Xbox One Series S",
-      "preco" : 500.00
+      "preco": 500
     }
   ],
-  "compras" : [
+  "compras": [
     {
-      "id" : 1,
-      "Cliente_Id": 1,
-      "Produtos" : [
+      "id": 1,
+      "cliente_id": 1,
+      "produtos": [
         {
-          "id": 1,
-          "produto_id" : 1,
-          "qtd" : 2
+          "produto_id": 1,
+          "qtd": 2
         },
         {
-          "id": 2,
-          "produto_id" : 3,
-          "qtd" : 5
+          "produto_id": 3,
+          "qtd": 5
         }
       ]
-
+    },
+    {
+      "cliente_id": 1,
+      "produtos": [
+        {
+          "produto_id": 1,
+          "qtd": 2
+        },
+        {
+          "produto_id": 2,
+          "qtd": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "cliente_id": 1,
+      "produtos": [
+        {
+          "produto_id": 3,
+          "qtd": 2
+        }
+      ],
+      "id": 3
+    },
+    {
+      "cliente_id": 3,
+      "produtos": [
+        {
+          "produto_id": 1,
+          "qtd": 3
+        }
+      ],
+      "id": 4
+    },
+    {
+      "cliente_id": 1,
+      "produtos": [
+        {
+          "produto_id": 2,
+          "qtd": 3
+        }
+      ],
+      "id": 5
+    },
+    {
+      "cliente_id": 2,
+      "produtos": [
+        {
+          "produto_id": 1,
+          "qtd": 1
+        },
+        {
+          "produto_id": 2,
+          "qtd": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "cliente_id": 1,
+      "produtos": [
+        {
+          "produto_id": 1,
+          "qtd": 1
+        },
+        {
+          "produto_id": 2,
+          "qtd": 1
+        }
+      ],
+      "id": 7
+    },
+    {
+      "cliente_id": 2,
+      "produtos": [
+        {
+          "produto_id": 2,
+          "qtd": 1
+        },
+        {
+          "produto_id": 3,
+          "qtd": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "cliente_id": 1,
+      "produtos": [
+        {
+          "produto_id": 2,
+          "qtd": 1
+        }
+      ],
+      "id": 9
+    },
+    {
+      "cliente_id": 2,
+      "produtos": [
+        {
+          "produto_id": 1,
+          "qtd": 5
+        }
+      ],
+      "id": 10
     }
   ]
 }

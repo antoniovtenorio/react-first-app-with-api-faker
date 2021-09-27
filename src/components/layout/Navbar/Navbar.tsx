@@ -26,6 +26,8 @@ const Navbar = () => {
         Documentação
       </a>
 
+      <Link to="/compras" className="navbar-item">Compras</Link>
+          
       <div className="navbar-item has-dropdown is-hoverable">
       <Link to="/clientes" className="navbar-link">Clientes</Link>
 

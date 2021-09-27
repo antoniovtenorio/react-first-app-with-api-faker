@@ -1,5 +1,5 @@
 import { IProdutos } from "./IProdutos";
 
 export interface IProdutosPedidos extends IProdutos {
-    qtd: number;
+    qtd: number | any;
 }

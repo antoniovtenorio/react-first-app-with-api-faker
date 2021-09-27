@@ -1,5 +1,5 @@
 export interface IProdutos {
-    id?: number | null,
-    nome: string | any,
-    preco: number | null
+    id: number | any,
+    nome: string,
+    preco: number | any
 }
